@@ -1,12 +1,12 @@
 package quatro
 
-data class QuatroPiece(
+data class PieceDeQuarto(
     val hauteur: Hauteur,
     val forme: Forme,
     val couleur: Couleur,
     val cavite: Cavite
 ) : Piece {
-    infix fun possedeUneCaracteristiqueCommuneAvec(autre: QuatroPiece): Boolean {
+    infix fun possedeUneCaracteristiqueCommuneAvec(autre: PieceDeQuarto): Boolean {
         return when {
             hauteur == autre.hauteur -> true
             forme == autre.forme -> true
@@ -16,8 +16,8 @@ data class QuatroPiece(
         }
     }
 
-    fun differentPour(hauteur: Hauteur): QuatroPiece {
-        return QuatroPiece(
+    fun differentPour(hauteur: Hauteur): PieceDeQuarto {
+        return PieceDeQuarto(
             hauteur,
             this.forme,
             this.couleur,
@@ -25,24 +25,24 @@ data class QuatroPiece(
         )
     }
 
-    fun differentPour(forme: Forme): QuatroPiece {
-        return QuatroPiece(
+    fun differentPour(forme: Forme): PieceDeQuarto {
+        return PieceDeQuarto(
             this.hauteur,
             forme,
             this.couleur,
             this.cavite
         )
     }
-    fun differentPour(couleur: Couleur): QuatroPiece {
-        return QuatroPiece(
+    fun differentPour(couleur: Couleur): PieceDeQuarto {
+        return PieceDeQuarto(
             this.hauteur,
             this.forme,
             couleur,
             this.cavite
         )
     }
-    fun differentPour(cavite: Cavite): QuatroPiece {
-        return QuatroPiece(
+    fun differentPour(cavite: Cavite): PieceDeQuarto {
+        return PieceDeQuarto(
             this.hauteur,
             this.forme,
             this.couleur,

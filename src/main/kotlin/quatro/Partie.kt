@@ -19,7 +19,7 @@ class Partie(val plateau: Plateau, val dernierJoueur: Joueur = Joueur.AUCUN) {
     }
 }
 
-fun List<QuatroPiece>.ontToutesUneCaracteristiqueCommune(): Boolean {
+fun List<PieceDeQuarto>.ontToutesUneCaracteristiqueCommune(): Boolean {
     if (this.isEmpty())
         return false;
 

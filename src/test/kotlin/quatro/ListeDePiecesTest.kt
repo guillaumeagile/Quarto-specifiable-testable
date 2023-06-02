@@ -8,7 +8,7 @@ class ListeDePiecesTest : ShouldSpec({
 
     context("test unitaire sur des listes de pièces"){
 
-        val piece1 = QuatroPiece(
+        val piece1 = PieceDeQuarto(
             hauteur = Hauteur.HAUT,
             forme = Forme.CARRE,
             couleur = Couleur.CLAIRE,
@@ -16,7 +16,7 @@ class ListeDePiecesTest : ShouldSpec({
         )
         
         should("liste videe"){
-            val sut =    emptyList<QuatroPiece>()
+            val sut =    emptyList<PieceDeQuarto>()
             val actual = sut.ontToutesUneCaracteristiqueCommune()
 
             actual shouldBe false

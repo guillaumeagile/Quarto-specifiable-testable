@@ -6,8 +6,7 @@ class PlateauDimensionsVariables(
     val maxX: Int,
     val maxY: Int,
     private val listeDesPieces: Map<Coordonees, Piece> = mapOf(),
-    val dernierCoupEstValide: Boolean = true   //  pour éviter un argument de plus dans le constructeur, on peut introduire
-// un type PlateauDimensionsVariablesDernierCoupInvalide qui a comme propriété dernierCoupEstValide: Boolean = true
+    val dernierCoupEstValide: Boolean = true
 ) : Plateau {
 
     override fun placer(piece: Piece): PieceAPlacer {

@@ -10,13 +10,13 @@ class PartieTest : ShouldSpec({
     {
         val plateau = PlateauDimensionsVariables(4000, 3000, dernierCoupEstValide = false)
         val partieInitiale = Partie(plateau)
-        val piece1 = QuatroPiece(
+        val piece1 = PieceDeQuarto(
             hauteur = Hauteur.HAUT,
             forme = Forme.CARRE,
             couleur = Couleur.CLAIRE,
             cavite = Cavite.PLEINE
         )
-        val piece2 = QuatroPiece(
+        val piece2 = PieceDeQuarto(
             hauteur = Hauteur.BASSE,
             forme = Forme.CARRE,
             couleur = Couleur.CLAIRE,
@@ -98,7 +98,7 @@ class PartieTest : ShouldSpec({
     }
 
     context("test social avec doublure") {
-        val piece1 = QuatroPiece(
+        val piece1 = PieceDeQuarto(
             hauteur = Hauteur.HAUT,
             forme = Forme.CARRE,
             couleur = Couleur.CLAIRE,

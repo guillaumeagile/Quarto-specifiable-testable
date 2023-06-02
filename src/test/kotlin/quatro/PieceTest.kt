@@ -25,7 +25,7 @@ class PieceTest : ShouldSpec({
 
     context("une piece quatro")
     {
-        val observe = QuatroPiece(
+        val observe = PieceDeQuarto(
             hauteur = Hauteur.BASSE,
             forme = Forme.RONDE,
             couleur = Couleur.SOMBRE,
@@ -33,7 +33,7 @@ class PieceTest : ShouldSpec({
         )
 
         should("égalite pour 4 caractéristiques identique") {
-            val attendu = QuatroPiece(
+            val attendu = PieceDeQuarto(
                 hauteur = Hauteur.BASSE,
                 forme = Forme.RONDE,
                 couleur = Couleur.SOMBRE,
@@ -56,7 +56,7 @@ class PieceTest : ShouldSpec({
 
 
         should("aucune caractéristique en commun") {
-            val attendu = QuatroPiece(
+            val attendu = PieceDeQuarto(
                 hauteur = Hauteur.HAUT,
                 forme = Forme.CARRE,
                 couleur = Couleur.CLAIRE,
