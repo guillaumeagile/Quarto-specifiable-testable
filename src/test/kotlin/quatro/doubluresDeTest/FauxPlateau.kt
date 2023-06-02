@@ -5,6 +5,9 @@ import quatro.PieceAPlacer
 import quatro.Plateau
 
 class FauxPlateau(val dernierCoupEstValide: Boolean, val dernierePieceConnue: Piece = PiecePourLesTests(0))  : Plateau {
+    override val cestGagné: Boolean
+        get() = TODO("Not yet implemented")
+
     override fun placer(piece: Piece): PieceAPlacer {
         TODO("Not yet implemented")
     }

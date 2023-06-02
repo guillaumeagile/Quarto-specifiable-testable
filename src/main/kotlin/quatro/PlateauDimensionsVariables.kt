@@ -8,6 +8,8 @@ class PlateauDimensionsVariables(
     private val listeDesPieces: Map<Coordonees, Piece> = mapOf(),
     val dernierCoupEstValide: Boolean = true
 ) : Plateau {
+    override val cestGagné: Boolean
+        get() = TODO("Not yet implemented")
 
     override fun placer(piece: Piece): PieceAPlacer {
         return TempPieceAPlacer(this, piece)

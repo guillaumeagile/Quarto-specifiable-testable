@@ -4,7 +4,7 @@ import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 import quatro.*
 
-class ExampleSpec : BehaviorSpec({
+class AntiSecheSpec : BehaviorSpec({
     given("j'ai un plateau") {
         var plateau = PlateauQuarto.Build()
 

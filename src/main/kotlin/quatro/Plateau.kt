@@ -1,6 +1,8 @@
 package quatro
 
 interface Plateau {
+    val cestGagné: Boolean
+
     fun placer(piece: Piece): PieceAPlacer
     fun estEn(x: Int, y: Int): Piece
     fun nouvellePieceEn(piece: Piece, x: Int, y: Int): Plateau
