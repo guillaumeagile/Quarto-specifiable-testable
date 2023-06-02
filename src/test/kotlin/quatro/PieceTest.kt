@@ -27,17 +27,17 @@ class PieceTest : ShouldSpec({
     {
         val observe = PieceDeQuarto(
             hauteur = Hauteur.BASSE,
-            forme = Forme.RONDE,
-            couleur = Couleur.SOMBRE,
-            cavite = Cavite.CREUSE
+            forme = Forme.BOUCHON,
+            couleur = Couleur.NOIR,
+            habillage = Habillage.UNI
         )
 
         should("égalite pour 4 caractéristiques identique") {
             val attendu = PieceDeQuarto(
                 hauteur = Hauteur.BASSE,
-                forme = Forme.RONDE,
-                couleur = Couleur.SOMBRE,
-                cavite = Cavite.CREUSE
+                forme = Forme.BOUCHON,
+                couleur = Couleur.NOIR,
+                habillage = Habillage.UNI
             )
             observe shouldBe attendu
         }
@@ -49,7 +49,7 @@ class PieceTest : ShouldSpec({
         }
 
         should("inégalite de deux pièces lorsqu'elles diffèrent d'une caractéristique ici la couleur") {
-            val attendu = observe.differentPour(couleur = Couleur.CLAIRE)
+            val attendu = observe.differentPour(couleur = Couleur.BLANC)
 
             observe shouldNotBe attendu
         }
@@ -58,18 +58,18 @@ class PieceTest : ShouldSpec({
         should("aucune caractéristique en commun") {
             val attendu = PieceDeQuarto(
                 hauteur = Hauteur.HAUT,
-                forme = Forme.CARRE,
-                couleur = Couleur.CLAIRE,
-                cavite = Cavite.PLEINE
+                forme = Forme.FOND,
+                couleur = Couleur.BLANC,
+                habillage = Habillage.RAYURES
             )
             observe possedeUneCaracteristiqueCommuneAvec attendu shouldBe false
         }
 
         should("devrait avoir une caractéristique en commun la hauteur") {
             val attendu = observe
-                .differentPour(forme = Forme.CARRE)
-                .differentPour(couleur = Couleur.CLAIRE)
-                .differentPour(cavite = Cavite.PLEINE)
+                .differentPour(forme = Forme.FOND)
+                .differentPour(couleur = Couleur.BLANC)
+                .differentPour(habillage = Habillage.RAYURES)
             observe possedeUneCaracteristiqueCommuneAvec attendu shouldBe true
         }
 
@@ -77,23 +77,23 @@ class PieceTest : ShouldSpec({
         should("ces deux pieces ont pour unique caractéristique commune la forme") {
             val attendu = observe
                 .differentPour(hauteur = Hauteur.HAUT)
-                .differentPour(couleur = Couleur.CLAIRE)
-                .differentPour(cavite = Cavite.PLEINE)
+                .differentPour(couleur = Couleur.BLANC)
+                .differentPour(habillage = Habillage.RAYURES)
             observe possedeUneCaracteristiqueCommuneAvec attendu shouldBe true
         }
         should("ces deux pieces ont pour unique caractéristique commune la couleur") {
             val attendu = observe
                 .differentPour(hauteur = Hauteur.HAUT)
-                .differentPour(forme = Forme.CARRE)
-                .differentPour(cavite = Cavite.PLEINE)
+                .differentPour(forme = Forme.FOND)
+                .differentPour(habillage = Habillage.RAYURES)
             observe possedeUneCaracteristiqueCommuneAvec attendu shouldBe true
         }
 
         should("ces deux pieces ont pour unique caractéristique commune la cavité") {
             val attendu = observe
                 .differentPour(hauteur = Hauteur.HAUT)
-                .differentPour(forme = Forme.CARRE)
-                .differentPour(couleur = Couleur.CLAIRE)
+                .differentPour(forme = Forme.FOND)
+                .differentPour(couleur = Couleur.BLANC)
             observe possedeUneCaracteristiqueCommuneAvec attendu shouldBe true
         }
 

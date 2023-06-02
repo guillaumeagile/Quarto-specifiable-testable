@@ -4,14 +4,14 @@ data class PieceDeQuarto(
     val hauteur: Hauteur,
     val forme: Forme,
     val couleur: Couleur,
-    val cavite: Cavite
+    val habillage: Habillage
 ) : Piece {
     infix fun possedeUneCaracteristiqueCommuneAvec(autre: PieceDeQuarto): Boolean {
         return when {
             hauteur == autre.hauteur -> true
             forme == autre.forme -> true
             couleur == autre.couleur -> true
-            cavite == autre.cavite -> true
+            habillage == autre.habillage -> true
             else -> false
         }
     }
@@ -21,7 +21,7 @@ data class PieceDeQuarto(
             hauteur,
             this.forme,
             this.couleur,
-            this.cavite
+            this.habillage
         )
     }
 
@@ -30,7 +30,7 @@ data class PieceDeQuarto(
             this.hauteur,
             forme,
             this.couleur,
-            this.cavite
+            this.habillage
         )
     }
     fun differentPour(couleur: Couleur): PieceDeQuarto {
@@ -38,32 +38,32 @@ data class PieceDeQuarto(
             this.hauteur,
             this.forme,
             couleur,
-            this.cavite
+            this.habillage
         )
     }
-    fun differentPour(cavite: Cavite): PieceDeQuarto {
+    fun differentPour(habillage: Habillage): PieceDeQuarto {
         return PieceDeQuarto(
             this.hauteur,
             this.forme,
             this.couleur,
-            cavite
+            habillage
         )
     }
 }
 
 enum class Couleur {
-    SOMBRE,
-    CLAIRE
+    NOIR,
+    BLANC
 }
 
-enum class Cavite {
-    CREUSE,
-    PLEINE
+enum class Habillage {
+    UNI,
+    RAYURES
 }
 
 enum class Forme {
-    RONDE,
-    CARRE
+    BOUCHON,
+    FOND
 }
 
 enum class Hauteur {

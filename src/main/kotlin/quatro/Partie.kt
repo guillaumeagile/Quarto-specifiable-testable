@@ -25,6 +25,6 @@ fun List<PieceDeQuarto>.ontToutesUneCaracteristiqueCommune(): Boolean {
 
     return     this.all { p -> p.couleur == this.first().couleur }
             || this.all { p -> p.hauteur == this.first().hauteur }
-            || this.all { p -> p.cavite == this.first().cavite }
+            || this.all { p -> p.habillage == this.first().habillage }
             || this.all { p -> p.forme == this.first().forme }
 }

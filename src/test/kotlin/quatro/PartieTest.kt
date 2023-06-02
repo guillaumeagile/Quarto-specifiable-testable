@@ -12,15 +12,15 @@ class PartieTest : ShouldSpec({
         val partieInitiale = Partie(plateau)
         val piece1 = PieceDeQuarto(
             hauteur = Hauteur.HAUT,
-            forme = Forme.CARRE,
-            couleur = Couleur.CLAIRE,
-            cavite = Cavite.PLEINE
+            forme = Forme.FOND,
+            couleur = Couleur.BLANC,
+            habillage = Habillage.RAYURES
         )
         val piece2 = PieceDeQuarto(
             hauteur = Hauteur.BASSE,
-            forme = Forme.CARRE,
-            couleur = Couleur.CLAIRE,
-            cavite = Cavite.PLEINE
+            forme = Forme.FOND,
+            couleur = Couleur.BLANC,
+            habillage = Habillage.RAYURES
         )
 
         should("personne n'a joué") {
@@ -100,9 +100,9 @@ class PartieTest : ShouldSpec({
     context("test social avec doublure") {
         val piece1 = PieceDeQuarto(
             hauteur = Hauteur.HAUT,
-            forme = Forme.CARRE,
-            couleur = Couleur.CLAIRE,
-            cavite = Cavite.PLEINE
+            forme = Forme.FOND,
+            couleur = Couleur.BLANC,
+            habillage = Habillage.RAYURES
         )
 
         should("le dernier coup valide est celui donné par le plateau") {
