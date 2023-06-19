@@ -1,4 +1,4 @@
-package quatro
+package quartoDSL
 
 data class PieceDeQuarto(
     val hauteur: Hauteur,

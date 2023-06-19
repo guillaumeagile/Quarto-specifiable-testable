@@ -1,7 +1,8 @@
-package quatro
+package quartoTests
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
+import quartoDSL.*
 
 @Suppress("unused")
 class ListeDePiecesTest : ShouldSpec({

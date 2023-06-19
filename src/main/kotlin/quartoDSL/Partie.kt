@@ -1,4 +1,4 @@
-package quatro
+package quartoDSL
 
 class Partie(val plateau: Plateau, val dernierJoueur: Joueur = Joueur.AUCUN) {
 

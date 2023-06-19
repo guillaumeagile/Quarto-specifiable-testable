@@ -1,8 +1,8 @@
-package quatro.doubluresDeTest
+package quartoTests.doubluresDeTest
 
-import quatro.Piece
-import quatro.PieceAPlacer
-import quatro.Plateau
+import quartoDSL.Piece
+import quartoDSL.PieceAPlacer
+import quartoDSL.Plateau
 
 class FauxPlateau(val dernierCoupEstValide: Boolean, val dernierePieceConnue: Piece = PiecePourLesTests(0))  : Plateau {
     override val cestGagné: Boolean

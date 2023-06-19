@@ -1,8 +1,9 @@
-package quatro
+package quartoTests
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
-import quatro.doubluresDeTest.FauxPlateau
+import quartoTests.doubluresDeTest.FauxPlateau
+import quartoDSL.*
 
 @Suppress("unused")
 class PartieTest : ShouldSpec({

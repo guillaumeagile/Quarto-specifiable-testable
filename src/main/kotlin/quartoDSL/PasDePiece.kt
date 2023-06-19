@@ -1,4 +1,4 @@
-package quatro
+package quartoDSL
 
 class PasDePiece : Piece {
     override fun equals(other: Any?): Boolean {

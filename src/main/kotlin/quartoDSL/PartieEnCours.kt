@@ -1,4 +1,4 @@
-package quatro
+package quartoDSL
 
 class PartieEnCours(val joueurEnCours: Joueur, val plateau: Plateau) {
     private var derniereCoordonnees = Coordonees(0, 0)

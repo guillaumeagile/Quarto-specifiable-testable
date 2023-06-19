@@ -1,7 +1,8 @@
-package quatro
+package quartoTests
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
+import quartoDSL.Joueur
 
 class JoueurTest  : ShouldSpec({
     context("le joueur opposé de aucun joueur ")

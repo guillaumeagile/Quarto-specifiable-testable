@@ -1,4 +1,4 @@
-package quatro
+package quartoDSL
 
 typealias Coordonees = Pair<Int, Int>
 

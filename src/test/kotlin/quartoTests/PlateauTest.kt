@@ -1,8 +1,10 @@
-package quatro
+package quartoTests
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
-import quatro.doubluresDeTest.PiecePourLesTests
+import quartoTests.doubluresDeTest.PiecePourLesTests
+import quartoDSL.PasDePiece
+import quartoDSL.PlateauDimensionsVariables
 
 @Suppress("unused")
 class PlateauTest : ShouldSpec({

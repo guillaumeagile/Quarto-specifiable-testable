@@ -1,10 +1,11 @@
-package quatro
+package quartoTests
 
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.collections.shouldContainAll
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.shouldBe
-import quatro.doubluresDeTest.PiecePourLesTests
+import quartoTests.doubluresDeTest.PiecePourLesTests
+import quartoDSL.PlateauDimensionsVariables
 
 @Suppress("unused")
 class GeometryTest : ShouldSpec({
