@@ -12,12 +12,12 @@ class FizzBuzzTest : FunSpec({
         resultat shouldBe "Fizz"
     }
 
-    test("si on passe 5, on retourne 5") {
+    test("si on passe 4, on retourne 4") {
         //arrange
-        var resultat = FizzBuzz.eval(5)
+        var resultat = FizzBuzz.eval(4)
 
         //assert
-        resultat shouldBe "5"
+        resultat shouldBe "4"
     }
 
     test("si on passe 3, on retourne fizz") {
@@ -27,5 +27,30 @@ class FizzBuzzTest : FunSpec({
         //assert
         resultat shouldBe "Fizz"
     }
+
+    test("si on passe 5, on retourne buzz") {
+        //arrange
+        var resultat = FizzBuzz.eval(5)
+
+        //assert
+        resultat shouldBe "Buzz"
+    }
+
+    test("si on passe 15, on retourne fizzbuzz") {
+        //arrange
+        var resultat = FizzBuzz.eval(15)
+
+        //assert
+        resultat shouldBe "FizzBuzz"
+    }
+
+    test("si on passe 105, on retourne fizzbuzzquiz") {
+        //arrange
+        var resultat = FizzBuzz.eval(105)
+
+        //assert
+        resultat shouldBe "FizzBuzzQuiz"
+    }
+
 
 })
