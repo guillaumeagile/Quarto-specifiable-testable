@@ -1,6 +1,6 @@
 package fizzbuzz
 
-class FizzBuzz {
+class buzz {
     companion object {
 
         val rules = mapOf({ x: Int -> (x % 3 == 0) } to "Fizz", { x: Int -> (x % 5 == 0) } to "Buzz", { x: Int -> (x % 7 == 0) } to "Quiz")
